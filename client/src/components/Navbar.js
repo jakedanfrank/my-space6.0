@@ -1,6 +1,6 @@
 import React from "react";
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, } from "semantic-ui-react";
+import { Menu, Image, Segment, } from "semantic-ui-react";
 import { Link, withRouter, } from "react-router-dom";
 
 class Navbar extends React.Component {
@@ -41,18 +41,37 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <div>
+      <Segment>
         <Menu pointing secondary>
           <Link to="/">
             <Menu.Item
               name="home"
               id="home"
               active={this.props.location.pathname === "/"}
-            />
+              />
+          </Link>
+          <Link to="/my_friends">
+            <Menu.Item
+              name="my friends"
+              id="my friends"
+              active={this.props.location.pathname === "/my_friends"}
+              />
           </Link>
             { this.rightNavItems() }
         </Menu>
-      </div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            width: '100%',
+            height: '150px',
+            backgroundColor: "black",            
+          }}>
+            <Image src={require("../images/myspace.jpg")} alt="logo" />
+          </div>
+  
+        </div>
+      </Segment>
     )
   }
 }
