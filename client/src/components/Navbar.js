@@ -65,9 +65,9 @@ class Navbar extends React.Component {
             justifyContent: 'center',
             width: '100%',
             height: '150px',
-            backgroundColor: "black",            
+            backgroundColor: "white",            
           }}>
-            <Image src={require("../images/myspace.jpg")} alt="logo" />
+            <Image src={require("../images/myspace1.png")} alt="logo" />
           </div>
   
         </div>

@@ -5,11 +5,9 @@ one:
   avatar: MyString
   location: MyString
   interests: MyString
-  user: one
 
 two:
   name: MyString
   avatar: MyString
   location: MyString
   interests: MyString
-  user: two
